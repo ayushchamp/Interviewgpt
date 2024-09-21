@@ -9,6 +9,9 @@ from langchain_core.language_models.llms import BaseLLM
 from langchain_core.prompts.prompt import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
+import os
+
+
 load_dotenv()
 
 LLM_VERBOSE = False
@@ -200,7 +203,7 @@ def init_agents():
                                 max_tokens=8192,
                                 timeout=None,
                                 max_retries=2,
-                                api_key="AIzaSyDuhx0OL_NcA-lG9t_wlzhknpsz5HhUf3Q")
+                                api_key=os.getenv("GOOGLE_API_KEY"))
     st.session_state.agents["evaluation"] = AnswerEvaluationChain.from_llm(llm=chat, 
                                                                         position_description=st.session_state.position_description, 
                                                                         applicant_resume=st.session_state.applicant_resume, 
