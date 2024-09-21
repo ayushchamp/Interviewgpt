@@ -56,6 +56,8 @@ To run this application locally, ensure you have the following installed:
 2. **Interact with the chatbot**:
    - Open your web browser and navigate to `http://localhost:8501` to begin the interview process.
 
+**Incase you face JsonDecodeError, Please Refresh the Page and Start again**
+
 ### Contribution
 
 We welcome contributions! If you have suggestions for improvements or new features, please feel free to submit a pull request or open an issue on GitHub.
